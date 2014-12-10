@@ -8,4 +8,4 @@ On the first page, click “check history” button to show all Fibonacci sequen
 
 Thanks for using this application.
 
-Link to the project on GitHub:
+Link to the project on GitHub:https://github.com/mamanababa/disAs
