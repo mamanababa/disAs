@@ -37,10 +37,8 @@
 			}
 		}
 
-		System.out.println(list.size());
 		if (list != null && list.size() > 0) {
 			for (int i = 0; i < list.size(); i++) {
-				System.out.println(list.get(i));
 	%>
 	<center><%=list.get(i)%></center>
 	<br>
