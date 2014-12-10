@@ -11,6 +11,11 @@
 <script language="JavaScript">
 	function check(thisform) {
 		var max = thisform.max.value;
+		if(max=='') {
+			alert("please enter correct number ( must between 1-93 )");
+			thisform.max.focus();
+			return (false);
+		}
 		for (var i = 0; i < max.length; i++) {
 			var oneChar = max.charAt(i);
 			if (!(oneChar >= '0' && oneChar <= '9') || (max.charAt(0) =='0')) {
