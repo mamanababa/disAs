@@ -14,7 +14,7 @@ You can only input a number between 1 and 93 as the length of Fibonacci sequence
 
 Step 3
 ------------------------
-Then click the “submit” button to jump to next page to show the job number of your request then wait 10 seconds to jump to next page get the result of Fibonacci sequence and the length that you requested on the first page. There is a “return to start” button to back to the first page. 
+Then click the “submit” button to jump to next page(Response.jsp) to show the job number of your request then wait 10 seconds to jump to next page(Result.jsp) get the result of Fibonacci sequence and the length that you requested on the first page. There is a “return to start” button to back to the first page. 
 
 Step 4
 ------------------------
