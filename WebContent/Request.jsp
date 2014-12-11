@@ -11,14 +11,14 @@
 <script language="JavaScript">
 	function check(thisform) {
 		var max = thisform.max.value;
-		if(max=='') {
+		if (max == '') {
 			alert("please enter correct number ( must between 1-93 )");
 			thisform.max.focus();
 			return (false);
 		}
 		for (var i = 0; i < max.length; i++) {
 			var oneChar = max.charAt(i);
-			if (!(oneChar >= '0' && oneChar <= '9') || (max.charAt(0) =='0')) {
+			if (!(oneChar >= '0' && oneChar <= '9') || (max.charAt(0) == '0')) {
 				alert("please enter correct number ( must between 1-93 )");
 				thisform.max.focus();
 				return (false);
@@ -33,7 +33,7 @@
 				return (false);
 			}
 		}
-		if(max.length > 2) {
+		if (max.length > 2) {
 			alert("please enter correct number ( must between 1-93 )");
 			thisform.max.focus();
 			return (false);
@@ -46,7 +46,7 @@
 		 data of form(max and request-type) pass to the post method of FibServlet.java -->
 	                     
 	<form action="FibS" method="post" name="re">
-		<table align="center">
+		<table align="center" >
 			<tr align="center"
 				onmouseover="this.style.backgroundColor='#E6E6FA';"
 				onmouseout="this.style.backgroundColor='#FFFFFF';">
@@ -69,13 +69,17 @@
 			<tr align="center"
 				onmouseover="this.style.backgroundColor='#E6E6FA';"
 				onmouseout="this.style.backgroundColor='#FFFFFF';">
-				<td colspan=2><input type="submit" value="submit"
-					onClick="return check(this.form)"> <input type="button"
-					value="check history" onClick="window.location.href='History.jsp'">
-					<input type="button"
-					value="README" onClick="window.location.href='Readme.jsp'"></td>
+				<td><input type="submit" value="Submit"
+					onClick="return check(this.form)"></td>
 			</tr>
-
+			<tr align="center"
+				onmouseover="this.style.backgroundColor='#E6E6FA';"
+				onmouseout="this.style.backgroundColor='#FFFFFF';">
+				<td><input type="button" value="History"
+					onClick="window.location.href='History.jsp'"> <input
+					type="button" value="README"
+					onClick="window.location.href='Readme.jsp'"></td>
+			</tr>
 		</table>
 	</form>
 </body>

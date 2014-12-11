@@ -6,7 +6,7 @@ https://github.com/mamanababa/disAs
 
 Step 1
 ------------------------
-The main page of this application is “Request.jsp”. 
+The main/first page of this application is “Request.jsp”. 
 
 Step 2
 ------------------------
