@@ -23,7 +23,7 @@
 			</form></td>
 		</tr>
 		<tr>
-			<td>Page will refresh in 10 seconds</td>
+			<td>Page will refresh in 10 seconds then get result</td>
 		</tr>
 	</table>
 </body>
