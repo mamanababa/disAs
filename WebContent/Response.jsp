@@ -7,7 +7,7 @@
 <title>Second Page</title>
 </head>
 <script language="JavaScript">
-	setTimeout("getResult.submit();",2000);
+	setTimeout("getResult.submit();",10000);
 </script>
 <body>
 	<table align="center">
@@ -23,7 +23,7 @@
 			</form></td>
 		</tr>
 		<tr>
-			<td>Page will refresh in 2 seconds</td>
+			<td>Page will refresh in 10 seconds</td>
 		</tr>
 	</table>
 </body>

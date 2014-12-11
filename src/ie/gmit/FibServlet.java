@@ -51,6 +51,7 @@ public class FibServlet extends HttpServlet {
 			response.sendRedirect("Response.jsp?jobnumber=" + jobnumber);
 
 			// 调用远程方法计算fibonacci,并存入outQ
+			// invoke remote method to calculate Fibonacci Sequence then put into outQ with jobnumber
 			try {
 				RemoteFibonacci fibonacci = (RemoteFibonacci) Naming
 						.lookup("rmi://127.0.0.1:1099/fib");
