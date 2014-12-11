@@ -18,6 +18,6 @@ Then click the “submit” button to jump to next page(Response.jsp) to show th
 
 Step 4
 ------------------------
-On the first page, click “check history” button to show all Fibonacci sequences that you requested before and their length. Click “README” button will show what you are reading now.
+On the first page, click “History” button to show all Fibonacci sequences that you requested before and their length. Click “README” button will show what you are reading now.
 
 Thanks for using this application.
