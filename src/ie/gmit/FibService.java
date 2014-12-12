@@ -44,20 +44,20 @@ public class FibService {
 		// full path of WEB-INF in tomcat directory
 		String path = this.getClass().getResource("/").getPath();
 		path = path.substring(0, path.length() - 8);
-		//System.out.println(path);
+		// System.out.println(path);
 
 		// full path of WebContent in Eclipse project
-		//System.out.println(System.getProperty("user.dir"));
+		// System.out.println(System.getProperty("user.dir"));
 		try {
 			file = new File(path + "fib.txt");
 			if (!file.exists())
 				file.createNewFile();
 
 			bufWriter = new BufferedWriter(new FileWriter(file, true));
-			//bufWriter.write("length: " + max);
+			// bufWriter.write("length: " + max);
 			bufWriter.write(max);
 			bufWriter.newLine();
-			//bufWriter.write("result: " + result);
+			// bufWriter.write("result: " + result);
 			bufWriter.write(result);
 			bufWriter.newLine();
 		} catch (IOException e) {

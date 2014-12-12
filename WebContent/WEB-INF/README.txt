@@ -6,7 +6,7 @@ https://github.com/mamanababa/disAs
 
 Step 1
 ------------------------
-The main/first page of this application is “Request.jsp”.(already as a welcome page in <welcome-file>Request.jsp</welcome-file> in web.xml)
+The main/first page of this application is “Request.jsp”(already specified in "welcome-file" tag as a welcome page in web.xml).
 
 Step 2
 ------------------------
