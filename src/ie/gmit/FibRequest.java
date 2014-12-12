@@ -5,9 +5,12 @@ public class FibRequest {
 	private int jobNum;
 	private int max;
 
+	public FibRequest() {
+	}
+
 	public FibRequest(int jobNum, int max) {
-		this.jobNum=jobNum;
-		this.max=max;
+		this.jobNum = jobNum;
+		this.max = max;
 	}
 
 	public int getJobNum() {
@@ -25,5 +28,5 @@ public class FibRequest {
 	public void setMax(int max) {
 		this.max = max;
 	}
-	
+
 }

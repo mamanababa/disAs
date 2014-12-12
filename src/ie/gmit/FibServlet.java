@@ -17,23 +17,11 @@ public class FibServlet extends HttpServlet {
 	private FibonacciService fs = new FibonacciService();
 
 	public void init() throws ServletException {
-		// ServletContext ctx = getServletContext();
-		// remoteHost = ctx.getInitParameter("RMI_SERVER");
-		try {
-			RemoteFibonacci fib = new Fibonacci();
-			LocateRegistry.createRegistry(1099);
-			Naming.rebind("fib", fib);
-		} catch (RemoteException e) {
-			e.printStackTrace();
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
+		fs.rmiRegis();
 	}
-
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-
 		PrintWriter out = response.getWriter();
 		String rType = request.getParameter("request-type");
 
@@ -49,23 +37,15 @@ public class FibServlet extends HttpServlet {
 			int jobnumber = fs.add(max);
 			// 页面跳转到response.jsp并显示jobnumber
 			response.sendRedirect("Response.jsp?jobnumber=" + jobnumber);
-
-			// 调用远程方法计算fibonacci,并存入outQ
-			// invoke remote method to calculate Fibonacci Sequence then put into outQ with jobnumber
-			try {
-				RemoteFibonacci fibonacci = (RemoteFibonacci) Naming
-						.lookup("rmi://127.0.0.1:1099/fib");
-				String fibString = fibonacci.getFibonacciSequence(max);
-				// fibonacci数列和jobnumber一起放入outQ
-				fs.put(jobnumber, fibString);
-			} catch (NotBoundException e) {
-				e.printStackTrace();
-			}
+			fs.finish();
 		}
 		// 若请求类型是Poll，则从outQ返回结果
 		else if (rType.equals("Poll")) {
 
 			int jobnumber = Integer.valueOf(request.getParameter("jobNo"));
+
+			System.out.println("poll, jobnumber:" + jobnumber);
+
 			// check outQ for result then pass to Result.jsp
 			String result = fs.getResult(jobnumber);
 			if (result != null) {
@@ -80,8 +60,10 @@ public class FibServlet extends HttpServlet {
 						.toString();
 				// save request max length and result into file
 				fs.save(max, result);
-			} else
+			} else {
+				System.out.println("result=" + result);
 				response.sendRedirect("Response.jsp?jobnumber=" + jobnumber);
+			}
 		}
 		out.flush();
 	}
