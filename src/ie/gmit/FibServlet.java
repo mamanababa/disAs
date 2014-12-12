@@ -14,7 +14,7 @@ import javax.servlet.jsp.PageContext;
 public class FibServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// private String remoteHost = null;
-	private FibService fs = new FibService();
+	private FibonacciService fs = new FibonacciService();
 
 	public void init() throws ServletException {
 		// ServletContext ctx = getServletContext();

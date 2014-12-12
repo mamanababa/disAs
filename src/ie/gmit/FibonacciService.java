@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class FibService {
+public class FibonacciService {
 
 	// In-Queue
 	private LinkedList<FibRequest> inQ = new LinkedList<FibRequest>();
