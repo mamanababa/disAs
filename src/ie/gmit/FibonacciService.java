@@ -8,6 +8,10 @@ import java.util.*;
 
 public class FibonacciService {
 
+	public static void main(String[] args) {
+
+	}
+
 	// In-Queue
 	private LinkedList<FibRequest> inQ = new LinkedList<FibRequest>();
 
